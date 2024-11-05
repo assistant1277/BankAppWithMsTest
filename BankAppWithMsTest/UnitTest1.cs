@@ -24,7 +24,7 @@ namespace BankAppWithMsTest
         [DataRow(0.01,0.01)]  
         public void Deposit_ValidAmount_IncreasesBalance(double amount,double expectedBalance)
         {
-            //creates new bank account with starting balance of 0
+            //create new bank account with starting balance of 0
             var account=new BankAccount(0);
 
             //call deposit method to add amount to account
@@ -44,7 +44,7 @@ namespace BankAppWithMsTest
             //create new bank account with starting balance of 0
             var account =new BankAccount(0);
 
-            //checks if deposit throws exception for invalid amount
+            //check if deposit throws exception for invalid amount
             //Assert.ThrowsException<InvalidAmountException>() ->that specifically checks if code inside it throw exception of type InvalidAmountException
             //()=> _service.Deposit(account,amount) ->means this is lambda expression that represent code we are testing and in this case deposit method call
             //and if this code throw InvalidAmountException test will pass and if it does not or if it throw different exception test will fail
@@ -132,7 +132,7 @@ namespace BankAppWithMsTest
             var accountA= new BankAccount(10);  
             var accountB =new BankAccount(0);
 
-            //check if transfer throw exception when account a has insufficient balance
+            //check if transfer throw exception when account has insufficient balance
             Assert.ThrowsException<InsufficientBalanceException>(()=> _service.Transfer(accountA,accountB,amount));
         }
     }
