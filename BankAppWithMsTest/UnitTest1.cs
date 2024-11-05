@@ -17,7 +17,7 @@ namespace BankAppWithMsTest
             _service = new BankAccountService();
         }
 
-        //tests deposit with valid amounts to check if balance increase correctly
+        //test deposit with valid amounts to check if balance increase correctly
         [TestMethod]
         [DataRow(5,5)] //deposit 5 should result in balance 5 
         [DataRow(20,20)] //deposit 20 should result in balance 20
